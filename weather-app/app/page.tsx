@@ -1,8 +1,13 @@
 'use client'
-import NavBar from "./components/Navbar/file"
+import NavBar from "./components/Navbar/Navbar"
+import SignIn from "./components/Navbar/SignIn"
 
 export default function Home() {
   return (
-    <NavBar/>
+    <main>
+      <NavBar/>
+      <SignIn/>
+    </main>
+
   )
 }
