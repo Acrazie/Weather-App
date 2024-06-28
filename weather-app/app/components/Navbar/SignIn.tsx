@@ -72,17 +72,30 @@ export default function SignIn() {
               Sign in
             </button>
           </div>
+          <div className="flex flex-1">
+            <button
+              type="submit"
+              className="flex items-center w-1/3 rounded-md bg-indigo-600 px-3 py-1.5 mx-2 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 space-x-2"
+            >
+              <img src="/google.png" alt="" className="w-6 h-6" />
+              <span>Sign in</span>
+            </button>
+            <button
+              type="submit"
+              className="flex items-center w-1/3 rounded-md bg-indigo-600 px-3 py-1.5 mx-2 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 space-x-2"
+            >
+              <img src="/spotify.png" alt="" className="w-6 h-6" />
+              <span>Sign in</span>
+            </button>
+            <button
+              type="submit"
+              className="flex items-center w-1/3 rounded-md bg-indigo-600 px-3 py-1.5 mx-2 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 space-x-2"
+            >
+              <img src="/github.png" alt="" className="w-6 h-6" />
+              <span>Sign in</span>
+            </button>
+          </div>
         </form>
-
-        <p className="mt-10 text-center text-sm text-gray-500">
-          Not a member?{" "}
-          <a
-            href="#"
-            className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-          >
-            Start a 14 day free trial
-          </a>
-        </p>
       </div>
     </div>
   );
