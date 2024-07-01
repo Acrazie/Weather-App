@@ -1,6 +1,20 @@
 'use client'
+import { useState, useEffect } from "react";
 
-export default function HomePage() {
+export default async function HomePage() {
+
+  const [weatherData, setWeatherData] = useState(null);
+
+  const fetchWeatherData = async () => {
+    const response = await fetch("/api/currentweather");
+    const data = response.json();
+    setWeatherData(data);
+
+    useEffect(() => {
+      fetchWeatherData();
+    }, []);
+  }
+
     return (
       <section className="flex items-center justify-center min-h-screen bg-blue-100   ">
         <div className="bg-gray-100 p-8 rounded-md shadow-lg max-w-lg w-full    ">
@@ -25,7 +39,7 @@ export default function HomePage() {
                 <img src="" alt="" />
               </div>
               <p className="mt-4 px-4 py-2 rounded-md bg-blue-500 text-white">
-                Name of the city
+                fetching the title of the city
               </p>
             </div>
           </div>
