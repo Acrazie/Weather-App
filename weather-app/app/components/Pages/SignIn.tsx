@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 
 export default function SignIn() {
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <Image
+        <img
           className="mx-auto h-10 w-auto"
           src="https://cdn.worldvectorlogo.com/logos/next-js.svg"
           alt="Your Company"
@@ -79,21 +78,21 @@ export default function SignIn() {
               type="submit"
               className="flex items-center w-1/3 rounded-md bg-indigo-600 px-3 py-1.5 mx-2 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 space-x-2"
             >
-              <Image src="/google.png" alt="" className="w-6 h-6" />
+              <img src="/google.png" alt="" className="w-6 h-6" />
               <span>Sign in</span>
             </button>
             <button
               type="submit"
               className="flex items-center w-1/3 rounded-md bg-indigo-600 px-3 py-1.5 mx-2 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 space-x-2"
             >
-              <Image src="/spotify.png" alt="" className="w-6 h-6" />
+              <img src="/spotify.png" alt="" className="w-6 h-6" />
               <span>Sign in</span>
             </button>
             <button
               type="submit"
               className="flex items-center w-1/3 rounded-md bg-indigo-600 px-3 py-1.5 mx-2 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 space-x-2"
             >
-              <Image src="/github.png" alt="" className="w-6 h-6" />
+              <img src="/github.png" alt="" className="w-6 h-6" />
               <span>Sign in</span>
             </button>
           </div>
