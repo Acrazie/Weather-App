@@ -1,13 +1,14 @@
 'use client'
 import NavBar from "./components/Navbar/Navbar"
-import SignIn from "./components/Navbar/SignIn"
+import HomePage from "./components/Pages/HomePage"
+import SignIn from "./components/Pages/SignIn"
 
 export default function Home() {
   return (
     <main>
       <NavBar/>
-      <SignIn/>
+      {/* <SignIn/> */}
+      <HomePage/>
     </main>
-
   )
 }
