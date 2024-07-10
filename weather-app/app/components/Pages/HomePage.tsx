@@ -58,7 +58,7 @@ const HomePage = () => {
         const data = await response.json();
         setPhotoUrl(data.photoUrl);
       } catch (error) {
-        console.error("Error fetching photo:", error);
+        console.error("Error  fetching photo:", error);
       }
     };
 
@@ -84,7 +84,7 @@ const HomePage = () => {
         </div>
         <div className="flex items-center justify-center mb-4">
           <div className="flex flex-col items-center">
-            <div className="flex items-center justify-center overflow-hidden w-42 h-42  bg-white border rounded-md">
+            <div className="flex items-center justify-center overflow-hidden w-42 h-42 bg-white border rounded-md">
               {photoUrl && (
                 <img src={photoUrl} alt="Photo" className="shrink-0	min-w-full min-h-full" />
               )}
@@ -99,10 +99,10 @@ const HomePage = () => {
             {weatherData ? `${weatherData.current.temp_c}°` : 'Loading...'}
           </button>
           <button className="w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white">
-            Infos
+          {weatherData ? `${weatherData.current.temp_c}°` : 'Loading...'}
           </button>
           <button className="w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white">
-            Infos
+          {weatherData ? `${weatherData.current.temp_c}°` : 'Loading...'}
           </button>
         </div>
       </div>
