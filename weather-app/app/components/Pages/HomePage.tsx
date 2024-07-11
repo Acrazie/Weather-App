@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Search from "../Ui/Search";
 import { useSearchParams } from "next/navigation";
-
 type WeatherData = {
   location: {
     name: string;
@@ -41,10 +40,8 @@ const HomePage = () => {
 
     const fetchPlaceData = async () => {
       try {
-        const response = await fetch (`/api/searchtext?query=${query}`);
+        const response = await fetch(`/api/searchtext?query=${query}`);
         const data: PlaceData = await response.json();
-        // console.log("Place data return",data)
-        setPlaceData(data);
         const photoReference = data.candidates[0].photos[0].photo_reference;
         fetchPhoto(photoReference);
       } catch (error) {
@@ -58,15 +55,12 @@ const HomePage = () => {
         const data = await response.json();
         setPhotoUrl(data.photoUrl);
       } catch (error) {
-        console.error("Error  fetching photo:", error);
+        console.error("Error fetching photo:", error);
       }
     };
 
-    Promise.all([fetchWeatherData(), fetchPlaceData()])
+    Promise.all([fetchWeatherData(), fetchPlaceData()]);
   }, [query]);
-
-
-
 
   return (
     <section className="flex items-center justify-center min-h-screen bg-blue-100">
@@ -79,14 +73,14 @@ const HomePage = () => {
           />
           <h1 className="text-2xl font-bold text-blue-600">Weather App</h1>
         </div>
-        <div className="mb-4">
-          <Search placeholder="Search..."/>
+        <div className="mb-12">
+          <Search placeholder="Search..." />
         </div>
         <div className="flex items-center justify-center mb-4">
           <div className="flex flex-col items-center">
             <div className="flex items-center justify-center overflow-hidden w-42 h-42 bg-white border rounded-md">
               {photoUrl && (
-                <img src={photoUrl} alt="Photo" className="shrink-0	min-w-full min-h-full" />
+                <img src={photoUrl} alt="Photo" className="shrink-0 min-w-full min-h-full" />
               )}
             </div>
             <p className="mt-4 px-4 py-2 rounded-md bg-blue-500 text-white">
@@ -99,10 +93,10 @@ const HomePage = () => {
             {weatherData ? `${weatherData.current.temp_c}°` : 'Loading...'}
           </button>
           <button className="w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white">
-          {weatherData ? `${weatherData.current.temp_c}°` : 'Loading...'}
+            Infos
           </button>
           <button className="w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white">
-          {weatherData ? `${weatherData.current.temp_c}°` : 'Loading...'}
+            Infos
           </button>
         </div>
       </div>
