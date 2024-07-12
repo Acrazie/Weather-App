@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, StrictMode } from "react";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
-import { Suspense } from "react";
+
 export default function Search({ placeholder }: { placeholder: string }) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -12,7 +12,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   useEffect(() => {
     const fetchSuggestions = async (input: string) => {
-      if (input.length === 0 || input.length < 3) {
+      if (input.length === 0) {
         setSuggestions([]);
         return;
       }
@@ -54,11 +54,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
   }
 
   return (
-    <Suspense>
+    <StrictMode>
       <div className="relative flex flex-1 flex-shrink-0">
-        <label htmlFor="Search" className="sr-only">
-          Search
-        </label>
         <input
           className="w-full px-4 py-2 rounded-md bg-blue-500 text-white placeholder-white border"
           type="text"
@@ -67,7 +64,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
           onChange={(e) => setTerm(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-        {suggestions.length > 0 && (
+        {suggestions.length > 2 && (
           <ul className="absolute top-full left-0 w-full bg-blue-400 border mt-1 rounded-md z-10">
             {suggestions.map((suggestion, index) => (
               <li
@@ -81,6 +78,6 @@ export default function Search({ placeholder }: { placeholder: string }) {
           </ul>
         )}
       </div>
-    </Suspense>
+    </StrictMode>
   );
 }
