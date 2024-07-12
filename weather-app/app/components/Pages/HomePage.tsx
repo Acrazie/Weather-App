@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Search from "../Ui/Search";
 import { useSearchParams } from "next/navigation";
-import { IncomingMessage } from "http";
+
 type WeatherData = {
   location: {
     name: string;
@@ -69,7 +69,7 @@ const HomePage = () => {
   }, [query]);
 
   return (
-    <section className="flex items-center justify-center min-h-screen bg-blue-100">
+    <section className="flex items-center justify-center min-h-screen">
       <div className="bg-gray-100 p-8 rounded-md shadow-lg max-w-lg w-full">
         <div className="flex flex-col items-center text-center mb-8">
           <img
