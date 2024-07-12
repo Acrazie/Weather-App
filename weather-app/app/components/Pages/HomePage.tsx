@@ -3,12 +3,18 @@
 import { useState, useEffect } from "react";
 import Search from "../Ui/Search";
 import { useSearchParams } from "next/navigation";
+import { IncomingMessage } from "http";
 type WeatherData = {
   location: {
     name: string;
   };
   current: {
     temp_c: number;
+    condition: {
+      icon: string;
+      text: string;
+    };
+    uv: number;
   };
 };
 
@@ -80,23 +86,35 @@ const HomePage = () => {
           <div className="flex flex-col items-center">
             <div className="flex items-center justify-center overflow-hidden w-42 h-42 bg-white border rounded-md">
               {photoUrl && (
-                <img src={photoUrl} alt="Photo" className="shrink-0 min-w-full min-h-full" />
+                <img
+                  src={photoUrl}
+                  alt="Photo"
+                  className="shrink-0 min-w-full min-h-full"
+                />
               )}
             </div>
-            <p className="mt-4 px-4 py-2 rounded-md bg-blue-500 text-white">
-              {weatherData ? weatherData.location.name : 'Loading...'}
+            <p className="mt-4 px-4 py-2 rounded-md bg-blue-500 text-white font-medium">
+              {weatherData ? weatherData.location.name : "Loading..."}
             </p>
           </div>
         </div>
         <div className="flex justify-between mt-4">
           <button className="w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white">
-            {weatherData ? `${weatherData.current.temp_c}°` : 'Loading...'}
+            {weatherData ? `${weatherData.current.temp_c}°` : "Loading..."}
           </button>
-          <button className="w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white">
-            Infos
+          <button className="flex flex-col items-center justify-center w-1/3 mx-1 px-4 pb-2 rounded-md bg-blue-500 text-white text-sm">
+            {weatherData && (
+              <img
+                src={weatherData.current.condition.icon}
+                alt={weatherData.current.condition.text}
+                className="w-10 h-10"
+              />
+            )}
+            {weatherData ? `${weatherData.current.condition.text}` : "Loading..."}
           </button>
-          <button className="w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white">
-            Infos
+          <button className=" flex flex-col items-center justify-evenly w-1/3 mx-1 px-4 py-2 rounded-md bg-blue-500 text-white font-medium">
+          <text className="font-normal">UV</text>
+            {weatherData ? `${weatherData.current.uv}` : "Loading..."}
           </button>
         </div>
       </div>

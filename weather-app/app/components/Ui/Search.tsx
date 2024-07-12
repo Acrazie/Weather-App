@@ -9,6 +9,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const router = useRouter();
   const [term, setTerm] = useState(searchParams.get('query') || "");
   const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
 
   useEffect(() => {
     const fetchSuggestions = async (input: string) => {
@@ -39,11 +40,20 @@ export default function Search({ placeholder }: { placeholder: string }) {
     }
     router.replace(`${pathname}?${params.toString()}`);
     setSuggestions([]); // Clear suggestions on search
+    setHighlightedIndex(-1);
   }
 
   function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === 'Enter') {
-      handleSearch(term);
+      if (highlightedIndex >= 0) {
+        handleSearch(suggestions[highlightedIndex]);
+      } else {
+        handleSearch(term);
+      }
+    } else if (event.key === "ArrowDown") {
+      setHighlightedIndex((prevIndex) => Math.min(prevIndex + 1, suggestions.length - 1));
+    } else if (event.key === "ArrowUp") {
+      setHighlightedIndex((prevIndex) => Math.max(prevIndex - 1, 0));
     }
   }
 
