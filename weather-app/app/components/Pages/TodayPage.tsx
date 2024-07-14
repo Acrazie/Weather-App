@@ -70,7 +70,7 @@ const HomePage = () => {
 
   return (
     <section className="flex items-center justify-center min-h-max my-10">
-      <div className="bg-gray-100 p-8 rounded-md shadow-lg max-w-lg w-full">
+      <div className="bg-gray-100 p-8 rounded-md shadow-lg max-w-5xl w-full">
         <div className="flex flex-col items-center text-center mb-8">
           <img
             src="https://cdn.worldvectorlogo.com/logos/next-js.svg"
