@@ -65,7 +65,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
   return (
     <StrictMode>
-      <div className="relative flex flex-1 flex-shrink-0">
+      <div className="relative flex flex-1 flex-shrink-0 max-w-md">
         <input
           className="w-full px-4 py-2 rounded-md bg-blue-500 text-white placeholder-white border"
           type="text"
