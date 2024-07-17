@@ -92,7 +92,7 @@ export default function Currentweather() {
           <span className="font-normal">Wind Direction</span>
           <div className="flex flex-1 flex-row justify-evenly items-center w-full">
             <img
-              src="right-arrow.png"
+              src="right-arrow (1).png"
               alt="Arrow"
               className="w-6 h-6"
               style={{

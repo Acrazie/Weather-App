@@ -43,6 +43,7 @@ export default function Todayweather() {
         const response = await fetch(`/api/forecastweather?query=${query}`);
         const data: WeatherForecastData = await response.json();
         setWeatherForecastData(data);
+        console.log(data);
       } catch (error) {
         console.error("Error fetching the data", error);
       }

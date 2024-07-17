@@ -4,6 +4,7 @@ import Search from "../Ui/Search";
 import Todayweather from "@/app/components/Ui/TodayWeather";
 import Currentweather from "../Ui/CurrentWeather";
 import Cityphoto from "../Ui/Cityphoto";
+import HourlyGraphs from "../Ui/TodayHourlyGraphs";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Cityphoto />
         <Currentweather />
         <Todayweather />
+        <HourlyGraphs />
       </div>
     </section>
   );
