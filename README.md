@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Acrazie/Weather-App">
-    <img src="https://cdn.worldvectorlogo.com/logos/next-js.svg" alt="Logo" width="80" height="80">
+    <img src="https://global.discourse-cdn.com/auth0/original/2X/a/ae35edce19e64c53e5d455b22e8a2c82d093d4c9.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Weather-App</h3>
