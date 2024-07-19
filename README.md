@@ -131,6 +131,10 @@ Mayeul Desbazeille
   </a>
 </div>
 
+Email :
+
+mayeul.desbazeille@epitech.eu
+
 
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
