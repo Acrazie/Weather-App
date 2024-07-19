@@ -124,12 +124,14 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Contact
 
 Mayeul Desbazeille
-- LinkedIN :
-<div>
+
+<div style="display: flex; align-items: center;">
+  <p style="margin: 0 10px 0 0;">LinkedIn :</p>
   <a href="https://www.linkedin.com/in/mayeuld/">
-  <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn Logo" width=80 height=80 />
+    <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn Logo" width="80" height="80" />
   </a>
 </div>
+
 
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
