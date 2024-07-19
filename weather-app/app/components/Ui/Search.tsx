@@ -67,7 +67,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     <StrictMode>
       <div className="relative flex flex-1 flex-shrink-0 max-w-md">
         <input
-          className="w-full px-4 py-2 rounded-md bg-blue-500 text-white placeholder-white border"
+          className="w-full px-4 py-2 rounded-md bg-blue-500 text-white placeholder-white border font-semibold"
           type="text"
           placeholder={placeholder}
           value={term}
@@ -75,7 +75,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
           onKeyDown={handleKeyDown}
         />
         {suggestions.length > 2 && (
-          <ul className="absolute top-full left-0 w-full bg-blue-400 border mt-1 rounded-md z-10">
+          <ul className="absolute top-full left-0 w-full bg-blue-400 border mt-1 rounded-md z-10 text-white font-medium">
             {suggestions.map((suggestion, index) => (
               <li
                 key={index}

@@ -12,7 +12,6 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
-import { FlagIcon } from "@heroicons/react/24/outline";
 
 type WeatherForecastHourlyData = {
   location: {
@@ -49,6 +48,7 @@ export default function HourlyGraphs() {
         const data: WeatherForecastHourlyData = await response.json();
         setWeatherForecastHourlyData(data);
         console.log(data);
+        console.log(new Date);
       } catch (error) {
         console.error("Error fetching the data", error);
       }
@@ -76,7 +76,7 @@ export default function HourlyGraphs() {
       {chartData.length > 0 && (
         <>
         <div className="flex flex-col justify-center items-center">
-          <h2 className="text-black">Temps</h2>
+          <h2 className="text-black font-semibold">Temps</h2>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 30, bottom: 10 }}>
               <defs>
@@ -96,7 +96,7 @@ export default function HourlyGraphs() {
           </ResponsiveContainer>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <h2 className="text-black">UV Index</h2>
+          <h2 className="text-black font-semibold">UV Index</h2>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 30, bottom: 10 }}>
               <defs>
@@ -114,7 +114,7 @@ export default function HourlyGraphs() {
           </ResponsiveContainer>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <h2 className="text-black">Chance of Rain</h2>
+          <h2 className="text-black font-semibold">Chance of Rain</h2>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 30, bottom: 10 }}>
               <defs>
@@ -134,7 +134,7 @@ export default function HourlyGraphs() {
           </ResponsiveContainer>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <h2 className="text-black">Wind Speed</h2>
+          <h2 className="text-black font-semibold">Wind Speed</h2>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={chartData} margin={{ top: 10, right: 30, left: 30, bottom: 10 }}>
               <defs>
