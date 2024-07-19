@@ -4,8 +4,8 @@
 
 
 html, body {
-  height: 100%;
-  overflow: hidden;
+  /* height: 100%; */
+  /* overflow: hidden; */
 }
 
 :root {
@@ -16,14 +16,14 @@ html, body {
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-rgb: 50, 50, 50;
+    --background-rgb: 219, 234, 254;
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
-}
+} */
 
 @layer utilities {
   .text-balance {
