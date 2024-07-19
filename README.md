@@ -131,9 +131,7 @@ Mayeul Desbazeille
   </a>
 </div>
 
-Email :
-
-mayeul.desbazeille@epitech.eu
+Email : mayeul.desbazeille@epitech.eu
 
 
 
