@@ -3,7 +3,7 @@
 import Search from "../Ui/Search";
 import Todayweather from "@/app/components/Ui/TodayWeather";
 import Currentweather from "../Ui/CurrentWeather";
-import Cityphoto from "../Ui/Cityphoto";
+import Cityphoto from "../Ui/CityPhoto";
 import HourlyGraphs from "../Ui/TodayHourlyGraphs";
 import HourlyGraphsDay3 from "../Ui/Week3DaysWeather";
 
