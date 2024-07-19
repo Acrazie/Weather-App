@@ -126,9 +126,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 Mayeul Desbazeille
 - LinkedIN :
 <div>
-  <img src="https://www.linkedin.com/in/mayeuld/" alt="LinkedIn Logo" width=80 height=80>
-<!--   <a href="https://www.linkedin.com/in/mayeuld/"></a> -->
-</img>
+  <a href="https://www.linkedin.com/in/mayeuld/">
+  <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn Logo" width=80 height=80 />
+  </a>
 </div>
 
 
