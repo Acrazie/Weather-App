@@ -46,17 +46,23 @@
 ## About The Project
 <img src="https://github.com/user-attachments/assets/ba80ef25-9f45-4aaa-8e33-07db817d4a32" alt="Weather App" />
 
+This project is about delivering a useful App, a weather app. Every single one of us already used a weather app once, I thought could be a good idea to remake a simplied one.
+Here is Weather App, build in 3 weeks, this app allow the user to check the current weather of a city.
+Moreover, it can gives weather forecast data up to 3 days.
+Type of data :
+- Temps
+- Conditions (like sunny, rainy, etc...)
+- UV Index
+- Speed of Wind
+- Wind's direction
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+**Additional data :**
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+- Rain percentage
+- Snow percentage
+- Sunrise
+- Sunset
+- Moon Phase
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,12 +70,21 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+This project was build using the following languages/frameworks :
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
+* [![Typescript][Typesciptlang.org]][Typescript-url]
 * [![TailwindCss][TailwindCss.com]][TailwindCss-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+**Additional plugin/libraries :**
+
+- HeadLessui [Link: https://headlessui.com/]
+- Heroicons [Link: https://heroicons.com/]
+- NextUIi [Link: https://nextui.org/]
+- Framer-motion [Link: https://www.npmjs.com/package/framer-motion]
+- Recharts [Link: https://recharts.org/en-US/]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,48 +92,40 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+**Step 1:**
+- Install the latest version of npm :
   ```sh
   npm install npm@latest -g
   ```
+**Step 2:**
+- Git clone the repository [Tutorial: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository]
 
-### Installation
+**Step 3:**
+- Install every dependencies via this command line in the terminal`npm install` or `npm i`
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+**Step 4:**
+- Get the Api Keys :
+  Google Api Keys (Select the Google Place Api, not the new one) : [Tutorial: https://cloud.google.com/endpoints/docs/openapi/enable-api?hl=fr]
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+  Weather Api Key : [Tutorial: https://www.weatherapi.com/]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Step 5:**
+- Create a '_.env.local_' in the root directory of the project via this command line in the terminal `touch .env.local`, then set both Api Keys in it like so :
 
+<img src="https://github.com/user-attachments/assets/f70f77cc-9aee-4874-9f99-253fea09c29b" alt=".env.local file" />
 
+**Step 6:**
+-Launch the local server in development mode via this command line:
+```sh
+npm run dev
+```
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+**Step 7:**
+-You're done, enjoy 😀!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- CONTACT -->
 ## Contact
@@ -132,10 +139,6 @@ Mayeul Desbazeille
 </div>
 
 Email : mayeul.desbazeille@epitech.eu
-
-
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,6 +167,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [product-screenshot]: public/images/HomePage.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
+[Typesciptlang.org]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [TailwindCss.com]: https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat-square&logo=tailwindcss&logoColor=white
